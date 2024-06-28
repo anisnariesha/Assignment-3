@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: #e4e8e7;
+    --text-color: #333;
+    --main-color: #838b8c;
+    --second-color: #91827c;
+    --big-font: 6rem;
+    --h2-font: 3rem;
+    --p-font: 1.1rem;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--main-color);
+    padding: 30px 18%;
+    transition: ease .40s;
+}
+
+.logo {
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--bg-color);
+}
+
+.navbar {
+    display: flex;
+    z-index: 10000;
+    position: relative;
+}
+
+.navbar a {
+    color: var(--bg-color);
+    font-size: var(--p-font);
+    font-weight: 500;
+    padding: 10px 22px;
+    border-radius: 4px;
+    transition: ease .40s;
+}
+
+.navbar a:hover {
+    background: var(--bg-color);
+    color: var(--text-color);
+    box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
+    border-radius: 4px;
+}
+
+#menu-icon {
+    color: var(--bg-color);
+    font-size: 35px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+    position: relative;
+}
+
+section {
+    padding: 80px 18%;
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background: url(clinic.jpg);
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    text-align: center;
+}
+
+.home-text h1 {
+    font-size: var(--big-font);
+    line-height: 1.5;
+    color: var(--text-color);
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.home-text p {
+    color: var(--text-color);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 38px;
+    margin-bottom: 50px;
+}
+
+.home-btn {
+    display: inline-block;
+    font-size: 16px;
+    padding: 15px 30px;
+    background: #ffffffbf;
+    color: var(--main-color);
+    border-radius: 4px;
+    transition: ease .40s;
+}
+
+.home-btn:hover {
+    background: var(--bg-color);
+    transform: scale(1.1);
+}
+
+header .sticky {
+    background: var(--bg-color);
+    padding: 10px 18%;
+    box-shadow: rgba(33, 35, 38, 0.1);
+}
+
+.sticky .logo {
+    color: var(--text-color);
+}
+
+.sticky .navbar a {
+    color: var(--text-color);
+}
+
+.text h2 {
+    font-size: var(--h2-font);
+    line-height: 1.1;
+}
+
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.card {
+    background: var(--bg-color);
+    color: var(--text-color);
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card h4 {
+    padding: 15px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    background: var(--bg-color);
+    box-shadow: 5px 5px 20px rgb(85 85 85 / 10%);
+    padding: 30px;
+    gap: 20px;
+    border-radius: 4px;
+    margin: 20px 0;
+    transition: ease .40s;
+}
+
+.box:hover {
+    transform: scale(1.1);
+}
+
+.box i {
+    font-size: 35px;
+    color: var(--main-color);
+}
+
+.box span {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+@media (max-width: 992px) {
+    header {
+        padding: 20px 10%;
+    }
+
+    section {
+        padding: 70px 10%;
+    }
+
+    .home {
+        height: 60vh;
+    }
+
+    .home-text h1 {
+        font-size: 4rem;
+    }
+
+    .home-text p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px 5%;
+    }
+
+    section {
+        padding: 60px 5%;
+    }
+
+    .home {
+        height: 50vh;
+    }
+
+    .home-text h1 {
+        font-size: 3rem;
+    }
+
+    .home-text p {
+        font-size: 0.9rem;
+        line-height: 1.4rem;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--main-color);
+    }
+
+    .navbar a {
+        padding: 10px 20px;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    #menu-icon.active + .navbar {
+        display: flex;
+    }
+
+    .card-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 575px) {
+    .home {
+        height: 40vh;
+    }
+
+    .home-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .home-text p {
+        font-size: 0.8rem;
+        line-height: 1.3rem;
+    }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 8px;
+    position: relative;
+    text-align: center;
+}
+
+.modal-content img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-footer {
+    margin-top: 10px;
+}
+
+.modal-close-btn {
+    padding: 10px 20px;
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modal-close-btn:hover {
+    background-color: var(--second-color);
+}
+
+footer {
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+}
+
+footer .end-text p {
+    margin: 0;
+    font-size: var(--p-font);
+}
