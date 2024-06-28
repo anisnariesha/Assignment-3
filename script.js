@@ -5,7 +5,7 @@ function openModal(card) {
     // Extract data attributes from the clicked card
     var serviceName = card.getAttribute('data-service-name');
     var serviceDescription = card.getAttribute('data-service-description');
-    var servicePrice = parseFloat(card.getAttribute('data-service-price')); // Parse as float for correct number handling
+    var servicePrice = parseFloat(card.getAttribute('data-service-price'));
     var serviceImage = card.getAttribute('data-service-image');
 
     // Format price as RM
@@ -22,11 +22,14 @@ function openModal(card) {
     `;
 
     // Display the modal
-    modal.style.display = "block";
+    modal.style.display = "flex"; // Use flex to center vertically and horizontally
 
     // Handle modal close
     var closeModal = function() {
         modal.style.display = "none";
+        closeBtn.removeEventListener("click", closeModal);
+        window.removeEventListener("click", outsideClick);
+        document.removeEventListener("keydown", escapeClose);
     };
 
     // Close modal when clicking on the close button inside modal footer
@@ -34,9 +37,18 @@ function openModal(card) {
     closeBtn.addEventListener("click", closeModal);
 
     // Close modal when clicking outside of it
-    window.addEventListener("click", function(event) {
+    var outsideClick = function(event) {
         if (event.target === modal) {
             closeModal();
         }
-    });
+    };
+    window.addEventListener("click", outsideClick);
+
+    // Close modal with Escape key
+    var escapeClose = function(event) {
+        if (event.key === "Escape") {
+            closeModal();
+        }
+    };
+    document.addEventListener("keydown", escapeClose);
 }
