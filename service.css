@@ -309,14 +309,15 @@ header .sticky {
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
 }
 
 .modal-content {
     background-color: #fefefe;
-    margin: 10% auto;
+    margin: auto; /* Center horizontally */
     padding: 20px;
     border: 1px solid #888;
-    width: 90%;
     max-width: 500px;
     border-radius: 8px;
     position: relative;
@@ -329,38 +330,22 @@ header .sticky {
     margin-bottom: 15px;
 }
 
-.close {
-    color: #aaa;
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
 .modal-footer {
-    margin-top: 10px;
+    margin-top: 20px; /* Adjust spacing as needed */
+    text-align: center;
 }
 
 .modal-close-btn {
     padding: 10px 20px;
-    background-color: var(--main-color);
-    color: var(--bg-color);
+    background-color: #838b8c;
+    color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 
 .modal-close-btn:hover {
-    background-color: var(--second-color);
+    background-color: #91827c;
 }
 
 footer {
