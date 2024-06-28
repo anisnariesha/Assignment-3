@@ -79,12 +79,12 @@
         <!-- The Modal -->
         <div id="serviceModal" class="modal">
             <!-- Modal content -->
-            <div class="modal-content" style="background-color: #d7dcdb">
+            <div class="modal-content">
                 <div id="modalContent">
                     <!-- Content will be dynamically populated here -->
                 </div>
                 <div class="modal-footer">
-                    <button class="modal-close-btn" style="background-color: #838b8c; color: #fff">&times; Close</button>
+                    <button class="modal-close-btn">&times; Close</button>
                 </div>
             </div>
         </div>
