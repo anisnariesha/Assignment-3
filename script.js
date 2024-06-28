@@ -1,3 +1,15 @@
+// script.js
+
+document.addEventListener('DOMContentLoaded', () => {
+    const menuIcon = document.getElementById('menu-icon');
+    const navbar = document.querySelector('.navbar');
+
+    menuIcon.addEventListener('click', () => {
+        menuIcon.classList.toggle('active');
+        navbar.classList.toggle('active');
+    });
+});
+
 function openModal(card) {
     var modal = document.getElementById("serviceModal");
     var modalContent = document.getElementById("modalContent");
@@ -22,7 +34,7 @@ function openModal(card) {
     `;
 
     // Display the modal
-    modal.style.display = "flex"; // Use flex to center vertically and horizontally
+    modal.style.display = "flex";
 
     // Handle modal close
     var closeModal = function() {
