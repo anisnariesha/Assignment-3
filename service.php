@@ -12,14 +12,13 @@
 <body>
     <!-- header -->
     <header>
-        <a class="logo"><i class='bx bx-health'></i>HealthClinic</a>
-        <div class="bx bx-menu" id="menu-icon"></div>
-
-        <ul class="navbar">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="login.php" onclick="logout(event)">Logout</a></li>
-        </ul>
+        <div class="logo"><i class='bx bx-health'></i>HealthClinic</div>
+        <div id="menu-icon" class="menu-icon">&#9776;</div>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="login.php" onclick="logout(event)">Logout</a>
+        </nav>
     </header>
     
     <!-- home -->
